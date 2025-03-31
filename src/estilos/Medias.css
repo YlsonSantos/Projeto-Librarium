@@ -1,0 +1,250 @@
+/* Navbar */
+@media (max-width: 480px) {
+  .Navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 1.5rem;
+  }
+
+  .lado-esquerdo,
+  .lado-direito {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+    height: 3.25rem;
+  }
+
+  .links-da-barra {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .link-da-barra {
+    margin-left: 0;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    border-radius: 0.3125rem;
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s ease-in-out;
+    width: auto;
+    text-align: center;
+  }
+
+  .link-da-barra a {
+    color: black;
+    font-size: 1rem;
+    text-decoration: none;
+    display: block;
+    padding: 0.3125rem 0.625rem;
+  }
+
+  .link-da-barra:hover {
+    transform: translateY(-0.1875rem);
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.2);
+  }
+
+  .link-da-barra a:hover {
+    color: #2c6e6e;
+  }
+}
+
+@media (max-width: 768px) {
+  .Navbar {
+    padding: 1rem 2rem;
+  }
+
+  .lado-direito {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .links-da-barra {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .link-da-barra {
+    margin-left: 0;
+    padding: 0.5rem 1rem;
+    width: auto;
+  }
+
+  .link-da-barra a {
+    font-size: 1.125rem;
+  }
+}
+
+/* Home */
+@media (min-width: 769px) {
+  .grupo-cartoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribui os cartões igualmente */
+    gap: 20px; /* Espaçamento entre os cartões */
+  }
+
+  .cartao {
+    width: calc(33.33% - 20px); /* 3 cartões por linha, considerando o gap */
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 768px) {
+  .livro {
+    width: 150px !important;
+    height: auto !important;
+  }
+
+  .cartoes-librarium {
+    margin-top: 0;
+    padding-top: 10px; /* Ajuste o padding */
+  }
+
+  .cartoes-librarium h1 {
+    font-size: 3rem;
+  }
+
+  .cartoes-librarium p {
+    font-size: 1.1rem;
+  }
+
+  .grupo-cartoes {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cartões se movam para a próxima linha */
+    justify-content: space-between; /* Distribui os cartões igualmente */
+    gap: 20px; /* Ajuste no espaçamento */
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .cartao {
+    width: calc(50% - 20px); /* 2 cartões por linha */
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  .livro {
+    width: 100px !important;
+    height: auto !important;
+  }
+
+  .cartoes-librarium {
+    margin-top: 0;
+    padding-top: 5px;
+  }
+
+  .cartoes-librarium h1 {
+    font-size: 2.5rem;
+  }
+
+  .cartoes-librarium p {
+    font-size: 1rem;
+  }
+
+  .grupo-cartoes {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cartões se movam para a próxima linha */
+    justify-content: center; /* Centraliza os cartões */
+    gap: 10px; /* Menor espaçamento entre os cartões */
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .cartao {
+    width: 100%; /* 1 cartão por linha */
+    max-width: 250px; /* Limite para o tamanho máximo */
+    box-sizing: border-box;
+  }
+}
+
+/* Livros e autores*/
+@media (max-width: 828px) {
+  .adicionar-btn-container {
+    font-size: 24px;
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .adicionar-btn-container::before {
+    content: "+";
+    margin-right: 8px;
+  }
+
+  .adicionar-btn-container span {
+    display: none;
+  }
+  .container-livros {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .cards-livros {
+    gap: 15px;
+  }
+
+  .card-livro {
+    width: 100%;
+    min-height: auto;
+    margin-bottom: 15px;
+  }
+
+  .conteudo-modal {
+    max-width: 90%;
+    width: 100%;
+  }
+
+  .adicionar-btn-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 432px) {
+  .adicionar-btn-container {
+    font-size: 24px;
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .adicionar-btn-container::before {
+    content: "+";
+    margin-right: 8px;
+  }
+
+  .adicionar-btn-container span {
+    display: none;
+  }
+
+  .container-livros {
+    margin-top: 220px !important;
+    min-height: auto !important;
+  }
+
+  .container-autores {
+    margin-top: 220px !important;
+  }
+
+  .conteudo-modal {
+    width: 90% !important; /* Ajusta a largura do modal para caber melhor em telas pequenas */
+    padding: 15px !important;
+    transform: translate(-50%, -50%) !important;
+    top: 50% !important;
+    left: 50% !important;
+  }
+}
+

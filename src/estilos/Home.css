@@ -1,0 +1,119 @@
+main {
+  padding: 0;
+  background-color: #f9f9f9;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.livros {
+  width: 100%;
+  height: 470px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.livro {
+  width: 200px;
+  height: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.livro:nth-child(1) {
+  transform: rotate(-15deg);
+  margin-top: 50px;
+}
+
+.livro:nth-child(2) {
+  transform: rotate(-7.5deg);
+  margin-top: 60px;
+  margin-left: -20px;
+}
+
+.livro:nth-child(3) {
+  transform: rotate(7.5deg);
+  margin-top: 20px;
+  margin-left: -20px;
+}
+
+.livro:nth-child(4) {
+  transform: rotate(20deg);
+  margin-top: 100px;
+  margin-left: -20px;
+}
+
+.cartoes-librarium {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  margin-top: 30px;
+  text-align: center;
+  padding-bottom: 20px; 
+}
+
+.conteudo-librarium {
+  max-width: 800px;
+}
+
+.cartoes-librarium h1 {
+  font-size: 4rem;
+  color: #333;
+  margin: 50px 0 20px 0;
+  font-weight: bold;
+}
+
+.cartoes-librarium p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.grupo-cartoes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.cartao {
+  margin-top: 40px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  background-color: rgb(196, 228, 238);
+}
+
+.cartao:hover {
+  transform: scale(1.05);
+}
+
+.cartao h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10x;
+}
+
+.cartao p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+}
