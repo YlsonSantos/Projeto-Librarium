@@ -21,6 +21,8 @@ const Autores = () => {
   const [busca, setBusca] = useState<string>('');
   const [editando, setEditando] = useState<boolean>(false);
   const [openModal, setOpenModal] = useState<boolean>(false);
+  const [openVer, setOpenVer] = useState<boolean>(false);
+  const [autorSelecionado, setAutorSelecionado] = useState<Autor | null>(null);
 
   useEffect(() => {
     const autoresSalvos = localStorage.getItem("autores");
@@ -88,6 +90,12 @@ const Autores = () => {
     setEditando(false);
   };
 
+  // Função para exibir os detalhes do autor no modal
+  const verDetalhesAutor = (autor: Autor) => {
+    setAutorSelecionado(autor);
+    setOpenVer(true);
+  };
+
   return (
     <div className="container-autores">
       <div className="centralizar-autores">
@@ -114,6 +122,7 @@ const Autores = () => {
               <div className="botao-container">
                 <button className="editar-btn" onClick={() => editarAutor(autor)}>Editar</button>
                 <button className="excluir-btn" onClick={() => excluirAutor(autor.id)}>Excluir</button>
+                <button className="ver-btn" onClick={() => verDetalhesAutor(autor)}>Ver</button>
               </div>
             </div>
           ))}
@@ -198,7 +207,41 @@ const Autores = () => {
             </form>
           </DialogContent>
         </Dialog>
-        
+{/* Modal de Detalhes do Autor */}
+<Dialog open={openVer} onOpenChange={setOpenVer}>
+  <DialogContent className="modal-ver">
+    <DialogTitle>Detalhes do Autor</DialogTitle>
+    {autorSelecionado && (
+      <>
+        <DialogDescription>
+          <h3>{autorSelecionado.name}</h3>
+        </DialogDescription>
+        <div className="informacoes-autor">
+          <p>
+            <strong>ID:</strong> {autorSelecionado.id}
+          </p>
+          <p>
+            <strong>Nome:</strong> {autorSelecionado.name}
+          </p>
+          {autorSelecionado.email && (
+            <p>
+              <strong>Email:</strong> {autorSelecionado.email}
+            </p>
+          )}
+          {autorSelecionado.nacionalidade && (
+            <p>
+              <strong>Nacionalidade:</strong> {autorSelecionado.nacionalidade}
+            </p>
+          )}
+        </div>
+        <DialogClose asChild>
+          <button className="voltar-btn">Fechar</button>
+        </DialogClose>
+      </>
+    )}
+  </DialogContent>
+</Dialog>
+
       </div>
     </div>
   );

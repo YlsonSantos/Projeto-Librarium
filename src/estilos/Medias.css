@@ -264,6 +264,7 @@
     font-size: 0.9rem;
   }
 
+  .modal-ver .informacoes-autor,
   .modal-ver .informacoes-livro {
     gap: 8px;
   }
@@ -295,6 +296,7 @@
     font-size: 0.8rem;
   }
 
+  .modal-ver .informacoes-autor,
   .modal-ver .informacoes-livro {
     gap: 6px;
   }
@@ -306,5 +308,3 @@
     padding: 10px;
   }
 }
-
-
