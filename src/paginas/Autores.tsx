@@ -88,11 +88,6 @@ const Autores = () => {
     setEditando(false);
   };
 
-  const handleCloseModal = () => {
-    resetForm();
-    setOpenModal(false);
-  };
-
   return (
     <div className="container-autores">
       <div className="centralizar-autores">
@@ -124,10 +119,12 @@ const Autores = () => {
           ))}
         </div>
 
+        {/* Modal de Adicionar/Editar Autor */}
         <Dialog open={openModal} onOpenChange={setOpenModal}>
           <DialogTrigger asChild>
             <button className="adicionar-btn-container" onClick={() => {
               setEditando(false);
+              resetForm();
               setOpenModal(true);
             }}>
               <span className="adicionar-texto">+</span>
@@ -194,13 +191,14 @@ const Autores = () => {
 
               <div className="botao-container">
                 <DialogClose asChild>
-                  <button className="voltar-btn" onClick={handleCloseModal}>Fechar</button>
+                  <button className="voltar-btn">Fechar</button>
                 </DialogClose>
                 <button type="submit" className="adicionar-btn">{editando ? "Salvar" : "Adicionar"}</button>
               </div>
             </form>
           </DialogContent>
         </Dialog>
+        
       </div>
     </div>
   );

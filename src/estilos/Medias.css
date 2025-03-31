@@ -247,4 +247,64 @@
     left: 50% !important;
   }
 }
+@media (max-width: 828px) {
+  .modal-ver {
+    max-width: 70%;
+    padding: 15px;
+    margin: 0 10px;
+    transform: translate(24%, 20%) !important;
+  }
+
+  .modal-ver h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  .modal-ver p {
+    font-size: 0.9rem;
+  }
+
+  .modal-ver .informacoes-livro {
+    gap: 8px;
+  }
+
+  .modal-ver .voltar-btn {
+    width: 100%;
+    max-width: 120px;
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 432px) {
+  .modal-ver {
+    width: 70% !important;
+    padding: 10px !important;
+    transform: translate(-53%, -50%) !important;
+    top: 50% !important;
+    left: 50% !important;
+    margin: 0 10px;
+  }
+
+  .modal-ver h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .modal-ver p {
+    font-size: 0.8rem;
+  }
+
+  .modal-ver .informacoes-livro {
+    gap: 6px;
+  }
+
+  .modal-ver .voltar-btn {
+    width: 100%;
+    max-width: 120px;
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
 

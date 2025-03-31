@@ -32,6 +32,9 @@ const Livros = () => {
 
   const [openAdicionar, setOpenAdicionar] = useState<boolean>(false);
   const [openEditar, setOpenEditar] = useState<boolean>(false);
+  const [openVer, setOpenVer] = useState<boolean>(false);
+
+  const [livroSelecionado, setLivroSelecionado] = useState<Livro | null>(null);
 
   useEffect(() => {
     const livrosSalvos = localStorage.getItem("livros");
@@ -45,7 +48,7 @@ const Livros = () => {
       alert("Por favor, forneça um ID para o livro.");
       return;
     }
-    
+
     const novoLivro: Livro = {
       id,
       nome,
@@ -128,6 +131,11 @@ const Livros = () => {
     setCapa(null);
   };
 
+  const abrirModalVer = (livro: Livro) => {
+    setLivroSelecionado(livro);
+    setOpenVer(true);
+  };
+
   return (
     <div className="container-livros">
       <div className="centralizar-livros">
@@ -164,6 +172,12 @@ const Livros = () => {
               </p>
               <div className="botao-container">
                 <button
+                  className="ver-btn"
+                  onClick={() => abrirModalVer(livro)}
+                >
+                  Ver
+                </button>
+                <button
                   className="editar-btn"
                   onClick={() => editarLivro(livro)}
                 >
@@ -173,7 +187,7 @@ const Livros = () => {
                   className={livro.lido ? "lido-btn verde" : "lido-btn azul"}
                   onClick={() => marcarComoLido(livro.id)}
                 >
-                  {livro.lido ? "Não lido" : "Lido"}
+                  {livro.lido ? "N/lido" : "Lido"}
                 </button>
                 <button
                   className="excluir-btn"
@@ -358,10 +372,43 @@ const Livros = () => {
                   <button className="voltar-btn">Fechar</button>
                 </DialogClose>
                 <button type="submit" className="adicionar-btn">
-                  Salvar 
+                  Salvar
                 </button>
               </div>
             </form>
+          </DialogContent>
+        </Dialog>
+        <Dialog open={openVer} onOpenChange={setOpenVer}>
+          <DialogContent className="modal-ver">
+            <DialogTitle>Detalhes do Livro</DialogTitle>
+            {livroSelecionado && (
+              <>
+                <DialogDescription>
+                  <h3>{livroSelecionado.nome}</h3>
+                </DialogDescription>
+                <div className="informacoes-livro">
+                  <p>
+                    <strong>ID:</strong> {livroSelecionado.id}
+                  </p>
+                  <p>
+                    <strong>Nome:</strong> {livroSelecionado.nome}
+                  </p>
+                  <p>
+                    <strong>Autor:</strong> {livroSelecionado.autor}
+                  </p>
+                  <p>
+                    <strong>Ano de Publicação:</strong> {livroSelecionado.ano}
+                  </p>
+                  <p>
+                    <strong>Páginas:</strong>{" "}
+                    {livroSelecionado.paginas || "N/A"}
+                  </p>
+                </div>
+                <DialogClose asChild>
+                  <button className="voltar-btn">Fechar</button>
+                </DialogClose>
+              </>
+            )}
           </DialogContent>
         </Dialog>
       </div>
