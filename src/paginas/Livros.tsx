@@ -33,7 +33,6 @@ const Livros = () => {
   const [openAdicionar, setOpenAdicionar] = useState<boolean>(false);
   const [openEditar, setOpenEditar] = useState<boolean>(false);
 
-  // Carrega os livros salvos do localStorage
   useEffect(() => {
     const livrosSalvos = localStorage.getItem("livros");
     if (livrosSalvos) {
@@ -41,7 +40,6 @@ const Livros = () => {
     }
   }, []);
 
-  // Função de adicionar livro
   const adicionarLivro = () => {
     const novoLivro: Livro = {
       id: Date.now(),
@@ -61,7 +59,6 @@ const Livros = () => {
     setOpenAdicionar(false);
   };
 
-  // Função para editar livro
   const editarLivro = (livro: Livro) => {
     setId(livro.id);
     setNome(livro.nome);
@@ -72,7 +69,6 @@ const Livros = () => {
     setOpenEditar(true);
   };
 
-  // Salvar edição de livro
   const salvarEdicao = () => {
     const livrosAtualizados = livros.map((livro) =>
       livro.id === id
@@ -93,7 +89,6 @@ const Livros = () => {
     setOpenEditar(false);
   };
 
-  // Excluir livro
   const excluirLivro = (id: number) => {
     if (window.confirm("Tem certeza que deseja excluir este livro?")) {
       const livrosAtualizados = livros.filter((livro) => livro.id !== id);
@@ -102,7 +97,6 @@ const Livros = () => {
     }
   };
 
-  // Marcar livro como lido
   const marcarComoLido = (id: number) => {
     const livrosAtualizados = livros.map((livro) =>
       livro.id === id ? { ...livro, lido: !livro.lido } : livro
@@ -111,12 +105,10 @@ const Livros = () => {
     localStorage.setItem("livros", JSON.stringify(livrosAtualizados));
   };
 
-  // Filtragem de livros pela busca
   const livrosFiltrados = livros.filter((livro) =>
     livro.nome.toLowerCase().includes(busca.toLowerCase())
   );
 
-  // Função para resetar o formulário
   const resetForm = () => {
     setId(0);
     setNome("");
@@ -184,7 +176,6 @@ const Livros = () => {
           ))}
         </div>
 
-        {/* Modal de Adicionar Livro */}
         <Dialog open={openAdicionar} onOpenChange={setOpenAdicionar}>
           <DialogTrigger asChild>
             <button
@@ -270,7 +261,6 @@ const Livros = () => {
           </DialogContent>
         </Dialog>
 
-        {/* Modal de Editar Livro */}
         <Dialog open={openEditar} onOpenChange={setOpenEditar}>
           <DialogContent className="conteudo-modal">
             <DialogTitle>Editar Livro</DialogTitle>

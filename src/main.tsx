@@ -1,8 +1,7 @@
-// src/main.tsx
 import React from 'react'; 
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import './estilos/Global.css'; // Estilos globais
+import './estilos/Global.css'; 
 
 const rootElement = document.getElementById('app');
 

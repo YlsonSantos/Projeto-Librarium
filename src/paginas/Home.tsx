@@ -1,5 +1,5 @@
 import React from "react";
-import "../estilos/home.css"; // Importe o CSS específico da página
+import "../estilos/home.css"; 
 
 const Home = () => {
   return (

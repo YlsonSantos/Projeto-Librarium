@@ -119,7 +119,6 @@ const Autores = () => {
           ))}
         </div>
 
-        {/* Modal de Adicionar/Editar Autor */}
         <Dialog open={openModal} onOpenChange={setOpenModal}>
           <DialogTrigger asChild>
             <button className="adicionar-btn-container">
