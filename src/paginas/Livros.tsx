@@ -148,13 +148,13 @@ const Livros = () => {
               )}
               <h3>{livro.nome}</h3>
               <p>
-                <strong>ID do Livro:</strong> {livro.id}
+                <strong>ID do livro:</strong> {livro.id}
               </p>
               <p>
-                <strong>Nome do Livro:</strong> {livro.nome}
+                <strong>Nome:</strong> {livro.nome}
               </p>
               <p>
-                <strong>Autor do Livro:</strong> {livro.autor}
+                <strong>Autor:</strong> {livro.autor}
               </p>
               <p>
                 <strong>Ano de Publicação:</strong> {livro.ano}
@@ -358,7 +358,7 @@ const Livros = () => {
                   <button className="voltar-btn">Fechar</button>
                 </DialogClose>
                 <button type="submit" className="adicionar-btn">
-                  Salvar Alterações
+                  Salvar 
                 </button>
               </div>
             </form>
