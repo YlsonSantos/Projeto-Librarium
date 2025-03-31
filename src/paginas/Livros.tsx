@@ -41,8 +41,13 @@ const Livros = () => {
   }, []);
 
   const adicionarLivro = () => {
+    if (id === 0) {
+      alert("Por favor, forneça um ID para o livro.");
+      return;
+    }
+    
     const novoLivro: Livro = {
-      id: Date.now(),
+      id,
       nome,
       autor,
       ano,
@@ -70,6 +75,11 @@ const Livros = () => {
   };
 
   const salvarEdicao = () => {
+    if (id === 0) {
+      alert("Por favor, forneça um ID válido para o livro.");
+      return;
+    }
+
     const livrosAtualizados = livros.map((livro) =>
       livro.id === id
         ? {
@@ -199,6 +209,16 @@ const Livros = () => {
               }}
             >
               <div>
+                <label>ID do Livro (obrigatório):</label>
+                <input
+                  type="number"
+                  value={id}
+                  onChange={(e) => setId(parseInt(e.target.value))}
+                  required
+                />
+              </div>
+
+              <div>
                 <label>Nome do Livro (obrigatório):</label>
                 <input
                   type="text"
@@ -279,7 +299,6 @@ const Livros = () => {
                   value={id}
                   onChange={(e) => setId(parseInt(e.target.value))}
                   required
-                  disabled
                 />
               </div>
 
@@ -339,7 +358,7 @@ const Livros = () => {
                   <button className="voltar-btn">Fechar</button>
                 </DialogClose>
                 <button type="submit" className="adicionar-btn">
-                  Salvar
+                  Salvar Alterações
                 </button>
               </div>
             </form>
