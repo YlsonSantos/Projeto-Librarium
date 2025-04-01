@@ -1,4 +1,4 @@
-# Librarium - Desafio Front-End
+# Librarium
 
 **Librarium** é uma plataforma de gerenciamento de livros e autores, criada como parte de um desafio front-end. O objetivo principal do projeto é desenvolver um CRUD (Create, Read, Update, Delete) para livros e autores de forma simples e funcional. A plataforma tem como foco a organização eficiente de obras literárias, com uma interface limpa e intuitiva.
 
