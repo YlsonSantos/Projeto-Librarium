@@ -242,7 +242,7 @@
   .conteudo-modal {
     width: 90% !important; 
     padding: 15px !important;
-    transform: translate(-50%, -50%) !important;
+    transform: translate(-59%, -45%) !important;
     top: 50% !important;
     left: 50% !important;
   }
@@ -281,7 +281,7 @@
   .modal-ver {
     width: 70% !important;
     padding: 10px !important;
-    transform: translate(-53%, -50%) !important;
+    transform: translate(-56%, -50%) !important;
     top: 50% !important;
     left: 50% !important;
     margin: 0 10px;
