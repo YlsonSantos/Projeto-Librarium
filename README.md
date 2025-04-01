@@ -25,8 +25,8 @@
 
 ## Requisitos
 
-- **Criar um livro**: O livro possui as propriedades `id` (obrigatório), `name` (obrigatório), `author_id` (obrigatório) e `pages` (opcional).
-- **Criar um autor**: O autor possui as propriedades `id` (obrigatório), `name` (obrigatório) e `email` (opcional).
+- **Criar um livro**: O livro possui as propriedades `ID` (obrigatório), `Nome` (obrigatório), `Nome do Autor` (obrigatório), `Páginas` (opcional) e `Ano de publicação` (opcional).
+- **Criar um autor**: O autor possui as propriedades `ID` (obrigatório), `Nome` (obrigatório), `E-mail` (opcional) e `Nacionalidade` (opcional).
 
 ## Como Executar
 
