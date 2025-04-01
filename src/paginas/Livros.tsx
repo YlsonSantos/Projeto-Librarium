@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from "react";
-import {
-  Dialog,
-  DialogTrigger,
-  DialogContent,
-  DialogTitle,
-  DialogDescription,
-  DialogClose,
-} from "@radix-ui/react-dialog";
+import {Dialog, DialogTrigger, DialogContent, DialogTitle, DialogDescription, DialogClose,} 
+from "@radix-ui/react-dialog";
 import "../estilos/Livros.css";
 import "../estilos/Medias.css";
 
@@ -50,11 +44,7 @@ const Livros = () => {
     }
 
     const novoLivro: Livro = {
-      id,
-      nome,
-      autor,
-      ano,
-      paginas,
+      id, nome, autor, ano, paginas, 
       capa: capa ? URL.createObjectURL(capa) : undefined,
       lido: false,
     };
@@ -86,11 +76,7 @@ const Livros = () => {
     const livrosAtualizados = livros.map((livro) =>
       livro.id === id
         ? {
-            ...livro,
-            nome,
-            autor,
-            ano,
-            paginas,
+            ...livro, nome, autor, ano, paginas,
             capa: capa ? URL.createObjectURL(capa) : livro.capa,
           }
         : livro
@@ -155,21 +141,11 @@ const Livros = () => {
                 <div style={{ height: "200px", backgroundColor: "#ccc" }}></div>
               )}
               <h3>{livro.nome}</h3>
-              <p>
-                <strong>ID do livro:</strong> {livro.id}
-              </p>
-              <p>
-                <strong>Nome:</strong> {livro.nome}
-              </p>
-              <p>
-                <strong>Autor:</strong> {livro.autor}
-              </p>
-              <p>
-                <strong>Ano de Publicação:</strong> {livro.ano}
-              </p>
-              <p>
-                <strong>Páginas:</strong> {livro.paginas || "N/A"}
-              </p>
+              <p><strong>ID do livro:</strong> {livro.id}</p>
+              <p><strong>Nome:</strong> {livro.nome}</p>
+              <p><strong>Autor:</strong> {livro.autor}</p>
+              <p><strong>Ano de Publicação:</strong> {livro.ano}</p>
+              <p><strong>Páginas:</strong> {livro.paginas || "N/A"}</p>
               <div className="botao-container">
                 <button
                   className="ver-btn"
@@ -387,20 +363,11 @@ const Livros = () => {
                   <h3>{livroSelecionado.nome}</h3>
                 </DialogDescription>
                 <div className="informacoes-livro">
-                  <p>
-                    <strong>ID:</strong> {livroSelecionado.id}
-                  </p>
-                  <p>
-                    <strong>Nome:</strong> {livroSelecionado.nome}
-                  </p>
-                  <p>
-                    <strong>Autor:</strong> {livroSelecionado.autor}
-                  </p>
-                  <p>
-                    <strong>Ano de Publicação:</strong> {livroSelecionado.ano}
-                  </p>
-                  <p>
-                    <strong>Páginas:</strong>{" "}
+                  <p><strong>ID:</strong> {livroSelecionado.id}</p>
+                  <p><strong>Nome:</strong> {livroSelecionado.nome}</p>
+                  <p><strong>Autor:</strong> {livroSelecionado.autor}</p>
+                  <p><strong>Ano de Publicação:</strong> {livroSelecionado.ano}</p>
+                  <p><strong>Páginas:</strong>{" "}
                     {livroSelecionado.paginas || "N/A"}
                   </p>
                 </div>
