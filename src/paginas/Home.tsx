@@ -1,5 +1,5 @@
 import React from "react";
-import "../estilos/home.css"; 
+import "../estilos/home.css";
 
 const Home = () => {
   return (
@@ -17,9 +17,10 @@ const Home = () => {
         <div className="conteudo-librarium">
           <h1>Librarium</h1>
           <p>
-            Bem-vindo ao Librarium, sua plataforma para organizar livros de maneira eficiente. Com uma interface intuitiva, você pode
-            cadastrar, visualizar e gerenciar suas obras e escritores com apenas
-            alguns cliques.
+            Bem-vindo ao Librarium, sua plataforma para organizar livros de
+            maneira eficiente. Com uma interface intuitiva, você pode cadastrar,
+            visualizar e gerenciar suas obras e escritores com apenas alguns
+            cliques.
           </p>
         </div>
 

@@ -1,8 +1,8 @@
 // src/componentes/Navbar.tsx
 import React from "react";
-import { Link } from "react-router-dom"; // Importa o Link para navegação interna
-import "../estilos/Navbar.css"; // Estilos gerais da navbar
-import "../estilos/Medias.css"; // Estilos de media queries
+import { Link } from "react-router-dom"; 
+import "../estilos/Navbar.css"; 
+import "../estilos/Medias.css"; 
 
 const Navbar = () => {
   return (
@@ -15,10 +15,10 @@ const Navbar = () => {
       <div className="lado-direito">
         <div className="links-da-barra">
           <div className="link-da-barra">
-            <Link to="/livros">Livros</Link> {/* Usando o Link para navegação */}
+            <Link to="/livros">Livros</Link> 
           </div>
           <div className="link-da-barra">
-            <Link to="/autores">Autores</Link> {/* Link para outra página, se necessário */}
+            <Link to="/autores">Autores</Link> 
           </div>
         </div>
       </div>
