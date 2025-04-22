@@ -37,7 +37,7 @@
      ```
    - Acesse a pasta do projeto:
      ```bash
-     cd projeto-contato-seguro
+     cd projeto-Librarium
      ```
    - Instale as dependências necessárias:
      ```bash
